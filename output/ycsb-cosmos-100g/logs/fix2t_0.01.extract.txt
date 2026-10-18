@@ -1,0 +1,77 @@
+[INFO] Loading DB Config from file: configs/fix2t_0.01.cfg (src/db/ARDB.cpp:74) 
+[INFO] Loading DB Config: fix2t_0.01 (src/db/ARDB.cpp:77) 
+g_index_type: TWOTREE
+g_idx_btree_fanout: 250
+g_idx_btree_split_ratio: 0.9
+g_uni_page_idx_tbl: True
+g_buf_type: HYBRBUF
+g_total_buf_sz: 1171875000
+g_top_tree_buf_sz: 585937500
+g_bottom_tree_buf_sz: 585937500
+g_pagebuf_num_slots: 68998
+g_buf_entry_sz: 1000
+g_batch_eviction_period_ms: 100
+g_retain_idx_page: True
+g_batch_eviction: False
+g_eviction_simple_clock: False
+g_enable_group_commit: True
+g_commit_queue_limit: 100
+g_commit_group_sz: 0
+g_log_freq_us: 100
+g_enable_log: True
+g_load_to_remote_only: False
+g_restore_from_remote: True
+g_check_loaded: False
+g_tpcc_consistency_check: False
+g_tpcc_blind_inserts: False
+g_partition_sz: 10000
+g_load_range: False
+g_num_restore_thds: 8
+g_num_load_thds: 8
+g_remote_req_retries: 2000
+g_sim_rd_latency_us: 0
+g_sim_wr_latency_us: 0
+g_sim_rw_latency_us: 0
+g_sim_scan_latency_us: 0
+g_sim_scan_per_row_ns: 0
+g_sim_batch_latency_us: 0
+g_sim_log_latency_us: 0
+g_sim_async_thds: 4
+g_sim_server_exec_thds: 8
+g_sim_enforce_batch_limit: False
+g_num_worker_threads: 16
+g_commit_pool_sz: 1
+g_cpu_freq: 1
+g_num_evict_thds: 32
+g_evict_threshold: 0.995
+g_warmup_finished: False
+g_enable_logging: False
+g_force_write: False
+g_zipf_random_hotspots: True
+g_scan_zipf_random_hotspots: False
+g_scan_zipf_partition_sz: 10000
+g_node_id: 0
+g_save_output: True
+g_early_lock_release: True
+g_enable_phantom_protection: False
+g_enable_partition_covering_lock: False
+g_negative_point_wl: False
+g_negative_scan_wl: False
+g_negative_search_op_type: GAPPHANTOM
+...
+[INFO] Initiated Object Buffer with 581287 slots (src/db/buffer/ObjectBufferManager.cpp:28) 
+[INFO] Loaded 566812 rows in memory (benchmark/ycsb/YCSBWorkload.cpp:859) 
+[INFO] 2tree warmup fabricate cap: 572596 (benchmark/ycsb/YCSBWorkload.cpp:860) 
+[INFO] 2tree top-idx leafwalk[post-warmup]: leaves 3610, keys 552367, disorder 0, dups 0, tombstones 0, probed 17261, unreachable 0 (src/db/access/IndexBTreeObject.cpp:625) 
+[INFO] 2tree top-idx leafwalk[post-restore]: leaves 3610, keys 552367, disorder 0, dups 0, tombstones 0, probed 17261, unreachable 0 (src/db/access/IndexBTreeObject.cpp:625) 
+[INFO] Finished warming up cache for YCSB workload (benchmark/ycsb/YCSBWorkload.cpp:50) 
+[INFO] Finished warming up (benchmark/ycsb/ycsb.h:36) 
+[INFO] 2tree top-miss diag: misses 1024 | on-warmup-keys 148 | present-at-insert 0 (src/local/ITable.cpp:783) 
+[INFO] 2tree top-miss diag: misses 8192 | on-warmup-keys 1307 | present-at-insert 0 (src/local/ITable.cpp:783) 
+[INFO] 2tree top-miss diag: misses 16384 | on-warmup-keys 2703 | present-at-insert 0 (src/local/ITable.cpp:783) 
+[INFO] 2tree top-miss diag: misses 24576 | on-warmup-keys 4129 | present-at-insert 0 (src/local/ITable.cpp:783) 
+[INFO] 2tree top-miss diag: misses 32768 | on-warmup-keys 5617 | present-at-insert 0 (src/local/ITable.cpp:783) 
+[INFO] 2tree top-miss diag: misses 40960 | on-warmup-keys 7050 | present-at-insert 1 (src/local/ITable.cpp:783) 
+[INFO] 2tree top-miss diag: misses 49152 | on-warmup-keys 8476 | present-at-insert 1 (src/local/ITable.cpp:783) 
+Evict batch write-backs: ok 0, failed 0
+Throughput (txn/sec): 179.43

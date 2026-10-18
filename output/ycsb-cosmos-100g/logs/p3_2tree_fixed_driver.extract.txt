@@ -1,0 +1,6 @@
+...
+Throughput (txn/sec): 179.43
+Throughput (txn/sec): 574.00
+Throughput (txn/sec): 1094.07
+Throughput (txn/sec): 2344.93
+Throughput (txn/sec): 5904.93

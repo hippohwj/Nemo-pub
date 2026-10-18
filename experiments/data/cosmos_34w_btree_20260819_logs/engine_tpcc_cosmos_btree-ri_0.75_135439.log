@@ -1,0 +1,384 @@
+[INFO] Loading DB Config from file: configs/tpcc_cosmos_btree-ri_0.75.cfg (src/db/ARDB.cpp:75) 
+[INFO] Loading DB Config: tpcc_cosmos_btree-ri_0.75 (src/db/ARDB.cpp:78) 
+[INFO] Unit page size is 8492 (src/db/buffer/PageBufferManager.cpp:16) 
+g_index_type: BTREE
+g_idx_btree_fanout: 245
+g_idx_btree_split_ratio: 0.9
+g_uni_page_idx_tbl: True
+g_buf_type: PGBUF
+g_total_buf_sz: 3697500000
+g_top_tree_buf_sz: 134217728
+g_bottom_tree_buf_sz: 134217728
+g_pagebuf_num_slots: 435409
+g_buf_entry_sz: 1000
+g_batch_eviction_period_ms: 100
+g_retain_idx_page: True
+g_pgbuf_debug: False
+g_pgbuf_census: True
+g_pgbuf_no_preload: True
+g_retain_idx_evict_cold: True
+g_generative_warmup: False
+g_evict_write_once_first: False
+g_evict_policy_bench: False
+g_evict_lru: False
+g_evict_meta_bytes: 0
+g_warmup_skip_log: False
+g_warmup_workers: 0
+g_batch_eviction: False
+g_warmup_slot_budget: 0
+g_dump_write_latency_us: 0
+g_log_write_latency_us: 5860
+g_evict_batch_egt: False
+g_eviction_simple_clock: True
+g_enable_group_commit: True
+g_commit_queue_limit: 5
+g_commit_group_sz: 32
+g_log_freq_us: 50
+g_enable_log: False
+g_load_to_remote_only: False
+g_restore_from_remote: True
+g_check_loaded: False
+g_tpcc_consistency_check: False
+g_tpcc_blind_inserts: True
+g_partition_sz: 10000
+g_load_range: False
+g_num_restore_thds: 8
+g_num_load_thds: 8
+g_remote_req_retries: 2000
+g_sim_rd_latency_us: 0
+g_sim_wr_latency_us: 0
+g_sim_rw_latency_us: 0
+g_sim_scan_latency_us: 0
+g_sim_scan_per_row_ns: 0
+g_sim_batch_latency_us: 0
+g_sim_log_latency_us: 0
+g_sim_async_thds: 4
+g_sim_server_exec_thds: 8
+g_sim_warmup_no_latency: False
+g_sim_enforce_batch_limit: False
+g_num_worker_threads: 16
+g_commit_pool_sz: 4
+g_cpu_freq: 1
+g_num_evict_thds: 5
+g_batch_write_fanout: 1
+g_scan_gap_merge: 1000000000
+g_scan_cpp_query: False
+g_evict_dirty_last: False
+g_latch_bench: False
+g_evict_flush_outside_latch: False
+g_evict_threshold: 0.7
+g_warmup_finished: False
+g_enable_logging: True
+g_force_write: False
+g_zipf_random_hotspots: False
+g_scan_zipf_random_hotspots: False
+g_scan_zipf_partition_sz: 10000
+g_node_id: 0
+g_save_output: True
+g_early_lock_release: True
+g_enable_phantom_protection: False
+g_enable_partition_covering_lock: False
+g_negative_point_wl: False
+g_negative_scan_wl: False
+g_negative_search_op_type: GAPPHANTOM
+g_phantom_protection_type: NO_PRO
+g_negative_search_op_enable: True
+g_gap_bit_op_enable: True
+g_partition_covering_lock_unit_sz: 10000
+g_enable_latency_distr_log: False
+g_scan_length: 999
+g_scan_query_scatter: True
+g_negative_dataset_seed: 0
+g_scan_workload_rw_thd_num: 18446744073709551615
+g_workingset_partition_num: 0
+g_scan_materialize: True
+g_record_size: 108
+[INFO] Loading TPCC Config from file: configs/tpcc_cosmos_btree-ri_0.75.cfg (benchmark/tpcc/TPCCConfig.h:41) 
+[INFO] Loading TPCC Config: tpcc_cosmos_btree-ri_0.75 (benchmark/tpcc/TPCCConfig.h:44) 
+num_warehouses_: 34
+order_cap_per_district_: 15000
+history_cap_per_district_: 20000
+perc_neworder_: 0.45
+perc_payment_: 0.43
+perc_orderstatus_: 0.04
+perc_delivery_: 0.04
+perc_stocklevel_: 0.04
+by_name_perc_: 0.6
+payment_remote_perc_: 0.15
+remote_ol_perc_: 0.01
+neworder_rollback_perc_: 0.01
+wh_zipf_theta_: 0
+rec_zipf_theta_: 0
+rand_order_reads_: 0
+cust_payment_: 0
+redraw_on_abort_: 0
+global_cust_zipf_: 0
+cust_hot_scatter_: 0
+order_hot_scatter_: 0
+loading_start_wh_: 0
+loading_end_wh_: -1
+num_workers_: 16
+runtime_: 240
+warmup_time_: 495
+[INFO] dataset id: ptpcc34w_123 (experiments/ExpTPCC.cpp:19) 
+[INFO] CPU freqency is 2.59 (src/common/Common.h:53) 
+[INFO] Start ARDB instance. (src/db/ARDB.cpp:22) 
+[INFO] Log store name ptpcc34w_123-log (src/remote/ILogStore.cpp:20) 
+[INFO] Initiating page buffer manager with 435409 empty slots.  (src/db/buffer/PageBufferManager.cpp:22) 
+[INFO] Start tpcc workload (benchmark/tpcc/tpcc.h:13) 
+[INFO] page-index meta for ptpcc34w_123-0: root_pg_id=1 num_nodes=2 (tbl_id_=0) (src/db/access/IndexBTreePage.cpp:45) 
+[INFO] Load btree index root from storage with fanout = 245 and split_threshold = 220 (src/db/access/IndexBTreePage.cpp:54) 
+[INFO] remote storage has 2 index nodes in total (src/db/access/IndexBTreePage.cpp:56) 
+[INFO] page-index meta for ptpcc34w_123-1: root_pg_id=3 num_nodes=5 (tbl_id_=1) (src/db/access/IndexBTreePage.cpp:45) 
+[INFO] Load btree index root from storage with fanout = 245 and split_threshold = 220 (src/db/access/IndexBTreePage.cpp:54) 
+[INFO] remote storage has 5 index nodes in total (src/db/access/IndexBTreePage.cpp:56) 
+[INFO] page-index meta for ptpcc34w_123-2: root_pg_id=225 num_nodes=9357 (tbl_id_=2) (src/db/access/IndexBTreePage.cpp:45) 
+[INFO] Load btree index root from storage with fanout = 245 and split_threshold = 220 (src/db/access/IndexBTreePage.cpp:54) 
+[INFO] remote storage has 9357 index nodes in total (src/db/access/IndexBTreePage.cpp:56) 
+[INFO] page-index meta for ptpcc34w_123-3: root_pg_id=24867 num_nodes=62381 (tbl_id_=3) (src/db/access/IndexBTreePage.cpp:45) 
+[INFO] Load btree index root from storage with fanout = 245 and split_threshold = 220 (src/db/access/IndexBTreePage.cpp:54) 
+[INFO] remote storage has 62381 index nodes in total (src/db/access/IndexBTreePage.cpp:56) 
+[INFO] page-index meta for ptpcc34w_123-4: root_pg_id=24867 num_nodes=46785 (tbl_id_=4) (src/db/access/IndexBTreePage.cpp:45) 
+[INFO] Load btree index root from storage with fanout = 245 and split_threshold = 220 (src/db/access/IndexBTreePage.cpp:54) 
+[INFO] remote storage has 46785 index nodes in total (src/db/access/IndexBTreePage.cpp:56) 
+[INFO] page-index meta for ptpcc34w_123-5: root_pg_id=24867 num_nodes=46785 (tbl_id_=5) (src/db/access/IndexBTreePage.cpp:45) 
+[INFO] Load btree index root from storage with fanout = 245 and split_threshold = 220 (src/db/access/IndexBTreePage.cpp:54) 
+[INFO] remote storage has 46785 index nodes in total (src/db/access/IndexBTreePage.cpp:56) 
+[INFO] page-index meta for ptpcc34w_123-6: root_pg_id=24867 num_nodes=748563 (tbl_id_=6) (src/db/access/IndexBTreePage.cpp:45) 
+[INFO] Load btree index root from storage with fanout = 245 and split_threshold = 220 (src/db/access/IndexBTreePage.cpp:54) 
+[INFO] remote storage has 748563 index nodes in total (src/db/access/IndexBTreePage.cpp:56) 
+[INFO] page-index meta for ptpcc34w_123-7: root_pg_id=225 num_nodes=919 (tbl_id_=7) (src/db/access/IndexBTreePage.cpp:45) 
+[INFO] Load btree index root from storage with fanout = 245 and split_threshold = 220 (src/db/access/IndexBTreePage.cpp:54) 
+[INFO] remote storage has 919 index nodes in total (src/db/access/IndexBTreePage.cpp:56) 
+[INFO] page-index meta for ptpcc34w_123-8: root_pg_id=24867 num_nodes=31191 (tbl_id_=8) (src/db/access/IndexBTreePage.cpp:45) 
+[INFO] Load btree index root from storage with fanout = 245 and split_threshold = 220 (src/db/access/IndexBTreePage.cpp:54) 
+[INFO] remote storage has 31191 index nodes in total (src/db/access/IndexBTreePage.cpp:56) 
+[INFO] page-index meta for ptpcc34w_123-9: root_pg_id=225 num_nodes=3119 (tbl_id_=9) (src/db/access/IndexBTreePage.cpp:45) 
+[INFO] Load btree index root from storage with fanout = 245 and split_threshold = 220 (src/db/access/IndexBTreePage.cpp:54) 
+[INFO] remote storage has 3119 index nodes in total (src/db/access/IndexBTreePage.cpp:56) 
+[INFO] page-index meta for ptpcc34w_123-10: root_pg_id=225 num_nodes=9357 (tbl_id_=10) (src/db/access/IndexBTreePage.cpp:45) 
+[INFO] Load btree index root from storage with fanout = 245 and split_threshold = 220 (src/db/access/IndexBTreePage.cpp:54) 
+[INFO] remote storage has 9357 index nodes in total (src/db/access/IndexBTreePage.cpp:56) 
+[INFO] g_pgbuf_no_preload: skipping restore pre-load for ptpcc34w_123-0 (src/db/access/IndexBTreePage.cpp:500) 
+[INFO] g_pgbuf_no_preload: skipping restore pre-load for ptpcc34w_123-1 (src/db/access/IndexBTreePage.cpp:500) 
+[INFO] g_pgbuf_no_preload: skipping restore pre-load for ptpcc34w_123-2 (src/db/access/IndexBTreePage.cpp:500) 
+[INFO] g_pgbuf_no_preload: skipping restore pre-load for ptpcc34w_123-3 (src/db/access/IndexBTreePage.cpp:500) 
+[INFO] g_pgbuf_no_preload: skipping restore pre-load for ptpcc34w_123-4 (src/db/access/IndexBTreePage.cpp:500) 
+[INFO] g_pgbuf_no_preload: skipping restore pre-load for ptpcc34w_123-5 (src/db/access/IndexBTreePage.cpp:500) 
+[INFO] g_pgbuf_no_preload: skipping restore pre-load for ptpcc34w_123-6 (src/db/access/IndexBTreePage.cpp:500) 
+[INFO] g_pgbuf_no_preload: skipping restore pre-load for ptpcc34w_123-7 (src/db/access/IndexBTreePage.cpp:500) 
+[INFO] g_pgbuf_no_preload: skipping restore pre-load for ptpcc34w_123-8 (src/db/access/IndexBTreePage.cpp:500) 
+[INFO] g_pgbuf_no_preload: skipping restore pre-load for ptpcc34w_123-9 (src/db/access/IndexBTreePage.cpp:500) 
+[INFO] g_pgbuf_no_preload: skipping restore pre-load for ptpcc34w_123-10 (src/db/access/IndexBTreePage.cpp:500) 
+[INFO] Finished warming up cache for TPCC workload (benchmark/tpcc/TPCCWorkload.cpp:217) 
+[INFO] Thread-0 starts TPCC execution! (benchmark/tpcc/TPCCWorkload.cpp:817) 
+[INFO] Thread-1 starts TPCC execution! (benchmark/tpcc/TPCCWorkload.cpp:817) 
+[INFO] Thread-4 starts TPCC execution! (benchmark/tpcc/TPCCWorkload.cpp:817) 
+[INFO] Thread-2 starts TPCC execution! (benchmark/tpcc/TPCCWorkload.cpp:817) 
+[INFO] Thread-3 starts TPCC execution! (benchmark/tpcc/TPCCWorkload.cpp:817) 
+[INFO] Thread-5 starts TPCC execution! (benchmark/tpcc/TPCCWorkload.cpp:817) 
+[INFO] Thread-6 starts TPCC execution! (benchmark/tpcc/TPCCWorkload.cpp:817) 
+[INFO] Thread-7 starts TPCC execution! (benchmark/tpcc/TPCCWorkload.cpp:817) 
+[INFO] Thread-8 starts TPCC execution! (benchmark/tpcc/TPCCWorkload.cpp:817) 
+[INFO] Thread-9 starts TPCC execution! (benchmark/tpcc/TPCCWorkload.cpp:817) 
+[INFO] Thread-10 starts TPCC execution! (benchmark/tpcc/TPCCWorkload.cpp:817) 
+[INFO] Thread-11 starts TPCC execution! (benchmark/tpcc/TPCCWorkload.cpp:817) 
+[INFO] Thread-12 starts TPCC execution! (benchmark/tpcc/TPCCWorkload.cpp:817) 
+[INFO] Thread-13 starts TPCC execution! (benchmark/tpcc/TPCCWorkload.cpp:817) 
+[INFO] Thread-14 starts TPCC execution! (benchmark/tpcc/TPCCWorkload.cpp:817) 
+[INFO] Thread-15 starts TPCC execution! (benchmark/tpcc/TPCCWorkload.cpp:817) 
+[INFO] Finished warming up (benchmark/tpcc/tpcc.h:69) 
+[INFO] Terminating execution. (src/db/ARDB.cpp:225) 
+[INFO] Joined all commit threads. (src/db/ARDB.cpp:228) 
+[INFO] Thread-6 finishes TPCC execution! (benchmark/tpcc/TPCCWorkload.cpp:936) 
+[INFO] Thread-2 finishes TPCC execution! (benchmark/tpcc/TPCCWorkload.cpp:936) 
+[INFO] Thread-0 finishes TPCC execution! (benchmark/tpcc/TPCCWorkload.cpp:936) 
+[INFO] Thread-9 finishes TPCC execution! (benchmark/tpcc/TPCCWorkload.cpp:936) 
+[INFO] Thread-11 finishes TPCC execution! (benchmark/tpcc/TPCCWorkload.cpp:936) 
+[INFO] Thread-7 finishes TPCC execution! (benchmark/tpcc/TPCCWorkload.cpp:936) 
+[INFO] Thread-8 finishes TPCC execution! (benchmark/tpcc/TPCCWorkload.cpp:936) 
+[INFO] Thread-13 finishes TPCC execution! (benchmark/tpcc/TPCCWorkload.cpp:936) 
+[INFO] Thread-5 finishes TPCC execution! (benchmark/tpcc/TPCCWorkload.cpp:936) 
+[INFO] Thread-1 finishes TPCC execution! (benchmark/tpcc/TPCCWorkload.cpp:936) 
+[INFO] Thread-14 finishes TPCC execution! (benchmark/tpcc/TPCCWorkload.cpp:936) 
+[INFO] Thread-15 finishes TPCC execution! (benchmark/tpcc/TPCCWorkload.cpp:936) 
+[INFO] Thread-3 finishes TPCC execution! (benchmark/tpcc/TPCCWorkload.cpp:936) 
+[INFO] Thread-4 finishes TPCC execution! (benchmark/tpcc/TPCCWorkload.cpp:936) 
+[INFO] Thread-12 finishes TPCC execution! (benchmark/tpcc/TPCCWorkload.cpp:936) 
+[INFO] Thread-10 finishes TPCC execution! (benchmark/tpcc/TPCCWorkload.cpp:936) 
+[INFO] Joined all worker threads. (src/db/ARDB.cpp:230) 
+[INFO] Print DB stats:  (src/common/Stats.h:230) 
+Total accesses_: 25955896
+Total misses_: 64093
+Total tuple_accesses_: 7305631
+Total false_positive_: 0
+Total true_negative_: 0
+Total negative_requests_: 0
+Total positive_requests_: 0
+Total idx_misses_: 18311
+Total idx_accesses_: 18650265
+Total bufferd_idx_pgs_: 111288
+Total remote_rds_: 62797
+Total remote_wrs_: 14911
+Total remote_rws_: 1296
+Total remote_scans_: 0
+Total abort_cnt_: 996
+Total scan_abort_cnt_: 6
+Total rw_abort_cnt_: 990
+Total insert_abort_cnt_: 0
+Total more_than_one_scan_txns_: 0
+Total txn_cnt_: 161284
+Total scan_txn_cnt_: 0
+Total rw_txn_cnt_: 0
+Total insert_txn_cnt_: 0
+Total log_time_ (ms): 800.524
+Total cc_time_ (ms): 1201.83
+Total phantom_insert_time_ (ms): 0
+Total idx_time_ (ms): 2.35631e+06
+Total abort_time_ (ms): 2725.37
+Total commit_time_ (ms): 0
+Total scan_abort_time_ (ms): 0
+Total rw_abort_time_ (ms): 0
+Total insert_abort_time_ (ms): 0
+Total rw_await_evict_time_ (ms): 0
+Total remote_io_time_ (ms): 2.2377e+06
+Total remote_rd_time_ (ms): 2.06655e+06
+Total remote_wr_time_ (ms): 155929
+Total remote_rw_time_ (ms): 15219.1
+Total remote_scan_time_ (ms): 0
+txn_latency_ ( 0% in us): 6.859
+txn_latency_ (50% in us): 140.916
+txn_latency_ (99% in us): 315850
+txn_latency_ (max in us): 4.14745e+07
+txn_latency_ (avg in us): 24150.3
+txn_latency_ (sum ): 3.89506e+09, size: 161284
+txn_latency_ (new avg in us): 24150.3
+Total log_group_sz_: 147557
+Total num_flushes_: 29898
+Total log_group_payload_sz_: 739695249
+Total log_latency_ (ms): 0
+Total log_flush_interval_ (ms): 240004
+log_flush_latency_ ( 0% in us): 5884.31
+log_flush_latency_ (50% in us): 5955.62
+log_flush_latency_ (99% in us): 6700.25
+log_flush_latency_ (max in us): 13267.8
+log_flush_latency_ (avg in us): 5999.16
+log_flush_latency_ (sum ): 1.79363e+08, size: 29898
+log_flush_latency_ (new avg in us): 5999.16
+Average sum_txn_latency (us): 24150.31, (sum 161284, cnt 0)
+Average abort_time_ (us): 16.90, (sum 161284, cnt 0)
+Average scan_abort_time_ (us): 0.00, (sum 0, cnt 0)
+Average insert_abort_time_ (us): 0.00, (sum 0, cnt 0)
+Average rw_abort_time_ (us): 0.00, (sum 0, cnt 0)
+Average cc_time_ (us): 7.45, (sum 161284, cnt 0)
+Average idx_time_ (us): 14609.71, (sum 161284, cnt 0)
+Average phantom_insert_time_ (us): 0.00, (sum 161284, cnt 0)
+Average log_time_ (us): 4.96, (sum 161284, cnt 0)
+Average remote_io_time_ (us): 13874.26, (sum 161284, cnt 0)
+Average remote_rd_time_ (us): 12813.11, (sum 161284, cnt 0)
+Average remote_wr_time_ (us): 966.80, (sum 161284, cnt 0)
+Average remote_rw_time_ (us): 94.36, (sum 161284, cnt 0)
+Average remote_scan_time_ (us): 0.00, (sum 161284, cnt 0)
+Average remote_scan_time_ (us) Per Op: 0.00, (sum 0, cnt 0)
+Average rw_await_evict_time_ (us): 0.00, (sum 161284, cnt 0)
+Average log_group_sz_: 4.94
+Average log_group_payload_sz_: 24740.63
+Average log_flush_interval_ (us): 8027.43, (sum 29898, cnt 0)
+Average sum_log_flush_latency (us): 5999.16, (sum 29898, cnt 0)
+Idx Hit Rate: 1.00
+Tuple Hit Rate: 0.60
+Evict batch write-backs: ok 0, failed 0
+[INFO] read hist: tbl  2 rds       3730 scans        0 rws      765 wrs     8766 (src/remote/IDataStore.cpp:98) 
+[INFO] read hist: tbl  3 rds       1242 scans        0 rws        0 wrs        0 (src/remote/IDataStore.cpp:98) 
+[INFO] read hist: tbl  4 rds       1054 scans        0 rws        0 wrs        0 (src/remote/IDataStore.cpp:98) 
+[INFO] read hist: tbl  5 rds       1971 scans        0 rws        0 wrs        0 (src/remote/IDataStore.cpp:98) 
+[INFO] read hist: tbl  6 rds      29541 scans        0 rws        0 wrs        0 (src/remote/IDataStore.cpp:98) 
+[INFO] read hist: tbl  8 rds       4448 scans        0 rws      531 wrs     6066 (src/remote/IDataStore.cpp:98) 
+[INFO] read hist: tbl  9 rds       2433 scans        0 rws        0 wrs        0 (src/remote/IDataStore.cpp:98) 
+[INFO] read hist: tbl 10 rds         67 scans        0 rws        0 wrs       79 (src/remote/IDataStore.cpp:98) 
+[INFO] read hist: tbl 63 rds      18311 scans        0 rws        0 wrs        0 (src/remote/IDataStore.cpp:98) 
+[INFO] read hist: total rds 62797 scans 0 rws 1296 wrs 14911 (post-warmup; should match remote_rds_/remote_scans_/remote_rws_/remote_wrs_) (src/remote/IDataStore.cpp:103) 
+[INFO] throttling: 429s rd 27857 wr 0 rw 0, backoff 1502.3 s of thread time = 67.1 % of the 2237.7 s charged to remote_io_time_ (src/db/ARDB.cpp:265) 
+[INFO] throttling: IDX of tbl  5  429s 27857 (src/db/ARDB.cpp:271) 
+[INFO] pgbuf census: resident idx-frames 111288 data-frames 324121 empty 0 (src/db/buffer/PageBufferManager.cpp:107) 
+[INFO] pgbuf census: tag-table 0 (DATA tbl 0) frames 1 (src/db/buffer/PageBufferManager.cpp:109) 
+[INFO] pgbuf census: tag-table 1 (DATA tbl 1) frames 5 (src/db/buffer/PageBufferManager.cpp:109) 
+[INFO] pgbuf census: tag-table 2 (DATA tbl 2) frames 53914 (src/db/buffer/PageBufferManager.cpp:109) 
+[INFO] pgbuf census: tag-table 3 (DATA tbl 3) frames 5108 (src/db/buffer/PageBufferManager.cpp:109) 
+[INFO] pgbuf census: tag-table 4 (DATA tbl 4) frames 5345 (src/db/buffer/PageBufferManager.cpp:109) 
+[INFO] pgbuf census: tag-table 5 (DATA tbl 5) frames 10337 (src/db/buffer/PageBufferManager.cpp:109) 
+[INFO] pgbuf census: tag-table 6 (DATA tbl 6) frames 142612 (src/db/buffer/PageBufferManager.cpp:109) 
+[INFO] pgbuf census: tag-table 7 (DATA tbl 7) frames 2326 (src/db/buffer/PageBufferManager.cpp:109) 
+[INFO] pgbuf census: tag-table 8 (DATA tbl 8) frames 80205 (src/db/buffer/PageBufferManager.cpp:109) 
+[INFO] pgbuf census: tag-table 9 (DATA tbl 9) frames 18240 (src/db/buffer/PageBufferManager.cpp:109) 
+[INFO] pgbuf census: tag-table 10 (DATA tbl 10) frames 6028 (src/db/buffer/PageBufferManager.cpp:109) 
+[INFO] pgbuf census: tag-table 268435456 (IDX of tbl 0) frames 1 (src/db/buffer/PageBufferManager.cpp:109) 
+[INFO] pgbuf census: tag-table 536870913 (IDX of tbl 1) frames 3 (src/db/buffer/PageBufferManager.cpp:109) 
+[INFO] pgbuf census: tag-table 805306370 (IDX of tbl 2) frames 8459 (src/db/buffer/PageBufferManager.cpp:109) 
+[INFO] pgbuf census: tag-table 1073741827 (IDX of tbl 3) frames 2862 (src/db/buffer/PageBufferManager.cpp:109) 
+[INFO] pgbuf census: tag-table 1342177284 (IDX of tbl 4) frames 4045 (src/db/buffer/PageBufferManager.cpp:109) 
+[INFO] pgbuf census: tag-table 1610612741 (IDX of tbl 5) frames 6134 (src/db/buffer/PageBufferManager.cpp:109) 
+[INFO] pgbuf census: tag-table 1879048198 (IDX of tbl 6) frames 62736 (src/db/buffer/PageBufferManager.cpp:109) 
+[INFO] pgbuf census: tag-table 2147483655 (IDX of tbl 7) frames 918 (src/db/buffer/PageBufferManager.cpp:109) 
+[INFO] pgbuf census: tag-table 2415919112 (IDX of tbl 8) frames 18676 (src/db/buffer/PageBufferManager.cpp:109) 
+[INFO] pgbuf census: tag-table 2684354569 (IDX of tbl 9) frames 3087 (src/db/buffer/PageBufferManager.cpp:109) 
+[INFO] pgbuf census: tag-table 2952790026 (IDX of tbl 10) frames 4367 (src/db/buffer/PageBufferManager.cpp:109) 
+[INFO] Print Bench Stats: (benchmark/common/BenchWorker.h:61) 
+Total rw_commit_cnt_: 0
+Total insert_commit_cnt_: 0
+Total scan_commit_cnt_: 0
+Total neworder_commit_cnt_: 72444
+Total payment_commit_cnt_: 69472
+Total orderstatus_commit_cnt_: 6495
+Total delivery_commit_cnt_: 6379
+Total stocklevel_commit_cnt_: 6494
+Total neworder_abort_cnt_: 0
+Total payment_abort_cnt_: 264
+Total orderstatus_abort_cnt_: 0
+Total delivery_abort_cnt_: 0
+Total stocklevel_abort_cnt_: 6
+Total neworder_rollback_cnt_: 726
+Total thd_runtime_ (ms): 4.24405e+06
+Total rw_txn_latency_ (ms): 0
+Total scan_txn_latency_ (ms): 0
+Total insert_txn_latency_ (ms): 0
+Total rw_txn_user_latency_ (ms): 0
+Total scan_txn_user_latency_ (ms): 0
+Total insert_txn_user_latency_ (ms): 0
+neworder_latency_ ( 0% in us): 49.127
+neworder_latency_ (50% in us): 273.089
+neworder_latency_ (99% in us): 355911
+neworder_latency_ (max in us): 4.14745e+07
+neworder_latency_ (avg in us): 33594.9
+neworder_latency_ (sum ): 2.43375e+09, size: 72444
+neworder_latency_ (new avg in us): 33594.9
+payment_latency_ ( 0% in us): 6.859
+payment_latency_ (50% in us): 24.66
+payment_latency_ (99% in us): 116735
+payment_latency_ (max in us): 2.65038e+06
+payment_latency_ (avg in us): 4117.61
+payment_latency_ (sum ): 2.86059e+08, size: 69472
+payment_latency_ (new avg in us): 4117.61
+orderstatus_latency_ ( 0% in us): 19.091
+orderstatus_latency_ (50% in us): 45.35
+orderstatus_latency_ (99% in us): 699370
+orderstatus_latency_ (max in us): 3.60554e+07
+orderstatus_latency_ (avg in us): 64418.6
+orderstatus_latency_ (sum ): 4.18399e+08, size: 6495
+orderstatus_latency_ (new avg in us): 64418.6
+delivery_latency_ ( 0% in us): 258.184
+delivery_latency_ (50% in us): 483.722
+delivery_latency_ (99% in us): 1.65928e+06
+delivery_latency_ (max in us): 1.9677e+07
+delivery_latency_ (avg in us): 107147
+delivery_latency_ (sum ): 6.8349e+08, size: 6379
+delivery_latency_ (new avg in us): 107147
+stocklevel_latency_ ( 0% in us): 411.169
+stocklevel_latency_ (50% in us): 954.255
+stocklevel_latency_ (99% in us): 112191
+stocklevel_latency_ (max in us): 1.44887e+07
+stocklevel_latency_ (avg in us): 11296.4
+stocklevel_latency_ (sum ): 7.33589e+07, size: 6494
+stocklevel_latency_ (new avg in us): 11296.4
+Average runtime (sec) of each worker: 265.25
+Throughput (txn/sec): 672.02
